@@ -1,0 +1,133 @@
+@charset "utf-8";/* CSS Document */
+
+* {margin:0px;padding:0px;text-decoration:none;outline: none;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+* html .clearfix {zoom: 1;}
+*:first-child+html .clearfix {zoom: 1;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+img{max-width:100%; height: auto;}
+
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: '';content: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+.clr{clear:both}
+body {font-family: helvetica, arial, sans-serif; color: #000; line-height: 1; font-size: 12px;}
+html{height: 100%;}
+
+.fRight{float: right;}
+.fLeft{float: left;}
+.alignCenter{text-align: center;}
+
+.wrapper{max-width: 1000px; margin: 0 auto;}
+.formContainer{font-size: 14px; margin: 20px 0; line-height: 25px; overflow: hidden;}
+.formContainer h1{font-size: 22px; font-weight: bold; text-align: center; background: #F5F5F5; border: 1px solid #ccc; padding: 10px 0; margin-bottom: 20px; box-shadow: 1px 1px 4px #CCC;}
+.formContainer dl .formRow{min-width: 50%; position: relative; overflow: hidden; padding-bottom: 10px;}
+.formContainer dl .formRow div{position: relative;}
+/*.formContainer dl .formRow #city1 .remove, .formContainer dl .formRow #practiceArea .remove{display: none !important;}*/
+.formContainer dl .formRow dt{display: inline-block; width: 200px; padding: 7px 0; clear: both; vertical-align: top;}
+.formContainer dl .formRow dd{display: inline-block; padding: 6px 10px 0 0; min-width: 25%; overflow: hidden; vertical-align: top;}
+.formContainer dl .formRow dd input[type="text"],
+.formContainer dl .formRow dd textarea{width: 95%; padding: 4px; border: 1px solid #ccc; border-radius: 4px;}
+.formContainer dl .formRow dd select{width: 100%; padding: 3px 2px; border: 1px solid #CCC; border-radius: 4px;}
+
+.formContainer dl .formRow dd .newCity{margin-top: 10px; width: 100%;}
+.formContainer dl .formRow dd .newCity input[type="text"]{width: 80% !important;}
+.formContainer dl .formRow dd .newCity #add{font-size: 12px; padding: 0 6px; font-weight: bold; float: right;}
+.formContainer dl .formRow dd button.ui-multiselect{width: 99% !important; color: #3C3B3B; font-size: 13px;}
+.formContainer dl .formRow .add, .formContainer dl .formRow .remove{color: #1c94c4; display: inline-block; font-size: 12px; font-weight: bold; margin-top: 6px;}
+.formContainer dl .formRow .add{position: absolute; bottom: -5px; left: 0; z-index: 5;}
+.formContainer dl .formRow .remove{position: absolute; right: 0; bottom: auto; }
+.formContainer dl #areaBlock .remove{bottom: 8px;}
+.formContainer .buttonBlock{text-align: center; background: #f5f5f5; border: 1px solid #ccc; padding: 10px 0;}
+.formContainer .buttonBlock .submitBTN, .formContainer dl .formRow dd .newCity #add{
+color: #fff; border-radius: 5px; cursor: pointer;
+background: #339ED6;
+background: -webkit-linear-gradient(#007acc, #339ed6); /* For Safari 5.1 to 6.0 */
+background: -o-linear-gradient(#007acc, #339ed6); /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(#007acc, #339ed6); /* For Firefox 3.6 to 15 */
+background: linear-gradient(#007acc, #339ed6); /* Standard syntax */}
+.formContainer .buttonBlock .submitBTN{padding: 5px 6px; border: 1px solid #fff; box-shadow: 1px 1px 3px #0049CC;}
+.formContainer .buttonBlock .cacelBTN{padding: 5px 6px; border: 1px solid #339ED6; box-shadow: 1px 2px 7px #CCCCCC; border-radius: 5px; cursor: pointer; margin-left: 10px;}
+
+.ui-multiselect-menu ul li input[type="checkbox"]{margin-right: 5px;}
+.ui-widget-header{background-color: #1C94C4 !important; background-image: none !important; border: none !important;}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus{background-color: #fff !important; background-image: none !important; border-color: #CCC !important; color: #000 !important;}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active{border-color: #949292 !important;}
+.ui-state-default .ui-icon{background-image: url(http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/ui-lightness/images/ui-icons_222222_256x240.png) !important;}
+
+.searchTableData{margin: 0 auto 20px;
+    position: relative;
+    width: 1000px;}
+.searchTableData table{border: 1px solid #ccc; background: #fff;margin: 0 auto;width: 1000px;}
+.searchTableData table tr th, .searchTableData table tr td{padding: 6px 2px; border-right: 1px solid #808080; border-top: 1px solid #808080;/* vertical-align: middle*/; text-align: center;font-size: 11px}
+/*.searchTableData table tr td span{text-overflow: ellipsis; white-space: nowrap; overflow: hidden; display: block; width: 99%;}*/
+.searchTableData table tr th{font-weight: bold;background: #76923d; color: #fff;vertical-align: middle;line-height: 15px;text-align: center;padding: 6px 0 4px 5px;font-size: 11px}
+.searchTableData table tr th span.sortingArrow{ background: url("../images/ui-icons_ffffff_256x240.png") no-repeat scroll -67px -2px rgba(0, 0, 0, 0);
+    cursor: pointer;
+    float: right;
+    height: 10px;
+    margin-top: 10px;
+    width: 10px;}
+.searchTableData table tr th span.sortingArrow.sortingArrowUp{background: url("../images/ui-icons_ffffff_256x240.png") no-repeat scroll -2px -5px rgba(0, 0, 0, 0);
+    left: 9px;
+    position: relative;
+    top: -12px;}
+
+
+/*ie css*/
+.ie7 .formContainer dl .formRow dt, .ie7 .formContainer dl .formRow dd{display: inline;}
+.ie7 .formContainer dl .formRow{min-width: 50%; max-width: 100%;}
+
+.anchorcolor{
+	color: #1C94C4;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 6px;
+}
+dd.width49{width: 490px}
+dt.width45, dd.width45{width: 498px}
+dd.width47{width: 485px}
+.formContainer dl .formRow dt.minPadding{padding: 6px 0px 0 6px;width: 197px}
+.formContainer dl .formRow dt.fulMinPadding{padding: 6px 0px 0 3px}
+
+.sortable th.ascend {
+    background: url(../images/caret_down.gif) no-repeat scroll 95% 50% #76923D;
+}
+.sortable th.descend {
+    background: url(../images/caret_up.gif) no-repeat scroll 95% 50% #76923D;
+}
+
+.searchTableData .prev{
+    background: none repeat scroll 0 0 #76923D;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 14px;
+    height: 20px;
+    margin-top: 10px;
+    position: absolute;
+    right: 2.4%;
+    text-align: center;
+    top: -35px;
+    width: 20px;
+    font-weight:bold; 
+}
+.searchTableData .next{background: none repeat scroll 0 0 #76923D;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 14px;
+    height: 20px;
+    margin-top: 10px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: -35px;
+    width: 20px;
+font-weight:bold; }
+.add{ background: linear-gradient(#007ACC, #339ED6) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    color: #FFFFFF;
+    cursor: pointer;
+padding:0 4px;}
